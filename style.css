@@ -31,6 +31,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+    position: relative;
 }
 
 /* 로고 섹션 */
@@ -53,7 +54,6 @@ body {
 /* 메뉴 스타일 */
 .main-menu {
     display: flex;
-    justify-content: space-around;
 }
 
 .main-menu ul {
@@ -84,8 +84,14 @@ body {
     color: #fff;
 }
 
-/* 반응형 설정: 화면이 작아질 때 햄버거 메뉴 표시 */
+/* 모바일 화면에서 헤더 레이아웃 조정 */
 @media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px;
+        justify-content: space-between; /* 양쪽 정렬 */
+    }
+
+    /* 모바일 메뉴 설정 */
     .main-menu {
         display: none;
         position: absolute;
@@ -98,10 +104,6 @@ body {
         padding: 20px 0;
     }
 
-    .mobile-menu-toggle {
-        display: block;
-    }
-
     .main-menu.open {
         display: flex;
     }
@@ -112,10 +114,8 @@ body {
         text-align: center;
     }
 
-    .main-menu ul li a {
-        padding: 10px 0;
+    .mobile-menu-toggle {
         display: block;
-        color: white;
     }
 }
 
@@ -134,7 +134,8 @@ body {
 
 @media (max-width: 768px) {
     .hero {
-        min-height: 240vh;
+        min-height: 270vh;
+        margin-top: 50px;
     }
 }
 
